@@ -1,8 +1,20 @@
 import React from 'react';
-import AuthLayout from '../_layout/auth';
-
+import { Link } from 'react-router-dom';
+import logo from '~/assets/logo.svg';
 // import { Container } from './styles';
 
 export default function SignUp() {
-  return <AuthLayout>Login</AuthLayout>;
+  return (
+    <>
+      <img src={logo} alt="gobarber" />
+
+      <form>
+        <input type="email" placeholder="Seu e-mail" />
+        <input type="password" placeholder="Sua senha" />
+
+        <button type="submit">Acessar</button>
+        <Link to="/register">Criar conta gratuita</Link>
+      </form>
+    </>
+  );
 }
